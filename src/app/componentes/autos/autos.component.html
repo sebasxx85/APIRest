@@ -1,0 +1,15 @@
+
+<H1>Autos</H1>
+
+<form [formGroup]="formularioAutos" (ngSubmit)="agregarAutos()">
+    <input type="text" placeholder="nombreAuto" formControlName="nombreAuto">
+    <input type="text" placeholder="Patente" formControlName="Patente">
+    <button type="submit">agregar Auto </button>
+</form>
+
+<div id="lista-autos" *ngIf="autos.length > 0" >
+    <pre>
+        {{autos | json}}
+    </pre>
+
+</div>
